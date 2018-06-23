@@ -22,7 +22,12 @@ def word_substituter(tweet)
   replace_words = replace_dict.keys
   
   tweet_arry.each do |word|
-    
+    if replace_words.include?(word)
+      tweet_new_array << replace_dict[word]
+    else
+      tweet_new_array << word
+    end
+  end
   
   tweet_new = tweet_new_array.join(" ")
 end
