@@ -23,7 +23,7 @@ def word_substituter(tweet)
   
   tweet_arry.each do |word|
     if replace_words.include?(word) || replace_words.include?(word.downcase)
-      tweet_new_array << replace_dict[word.down`]
+      tweet_new_array << replace_dict[word.downcase]
     else
       tweet_new_array << word
     end
